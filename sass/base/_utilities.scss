@@ -1,0 +1,29 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+// STEP 11 is in _home.scss ======================================= STEP 12 =================================== STEP 13 is in _composition.scss
+
+  @include respond(tablet-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tablet-port) {
+    margin-bottom: 5rem !important;
+  }
+} 
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}

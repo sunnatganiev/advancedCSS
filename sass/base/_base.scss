@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // This defines what 1rem = 10px => 16px / 62.5% = 10px
+  font-size: 62.5%;
+
+  // @media (max-width: 600px) { STEP 1 in _story.scss-------------------------- STEP 2 ---------------- STEP 3 at the bottom
+  //   width: 50%;
+  // }
+  // @media (max-width: 900px) {
+  //   width: 50%;
+  // }
+  // @media (max-width: 1200px) {
+  //   width: 50%;
+  // }
+  // @media (max-width: 1800px) {
+  //   width: 50%;
+  // }
+
+  // @include respond-phone { STEP 2 above ----------------------- STEP 3 END (Beginning in _mixin.scss)------------------- STEP 4 in _mixin.scss
+  //   width: 50%;
+  // }
+
+
+
+  // ========================= AT THE BEGINNING THE MEDIA QUERIES SHOUD BE VISE VERSA DON'T FORGET ABOUT IT ==========================
+
+  @include respond(big-desktop) { // 1rem = 12px => 12/16 = 75%
+    font-size: 75%;
+  }
+
+  @include respond(tablet-land) { // 1rem = 9px => 9/16 = 56.25%
+    font-size: 56.25%;
+  }
+
+  @include respond(tablet-port) { // 1rem = 8px => 8 / 16 = 50%
+    font-size: 50%;
+  }
+
+  // @include respond(phone) { // 1rem = 4.8px => 4.8 / 16 = 30%
+  //   font-size: 30%;
+  // }
+}
+
+
+body {
+  padding: 3rem;
+
+  @include respond(tablet-port) { // 1rem = 8px => 8 / 16 = 50%
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
