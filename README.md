@@ -7,3 +7,5 @@ GitHubda test o'tqazish uchun
 Yana bitta o'zgarish
 
 Yana uzgartirdim oxirgisi shu
+
+Yana bitta test
